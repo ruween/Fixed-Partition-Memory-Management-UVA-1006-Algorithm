@@ -46,12 +46,19 @@ minimum average turnaround time, give one of the schedules with the minimum aver
 time.
 
 Sample Input
+
 2 4
+
 40 60
+
 1 35 4
+
 1 20 3
+
 1 40 10
+
 1 60 7
+
 3 5
 10 20 30
 2 10 50 12 30
