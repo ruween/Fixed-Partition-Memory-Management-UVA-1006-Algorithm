@@ -8,6 +8,7 @@ memory regions, so that they could be executed concurrently. This was made diffi
 that the execution time of a program might depend on the amount of memory available to it. Every
 program has a minimum space requirement, but if it is assigned to a larger memory region its execution
 time might increase or decrease.
+
 In this program, you have to determine optimal assignments of programs to memory regions. Your
 program is given the sizes of the memory regions available for the execution of programs, and for each
 program a description of how its running time depends on the amount of memory available to it. Your
@@ -17,7 +18,9 @@ such that no two programs use the same memory region at the same time, and no pr
 to a memory region of size less than its minimum memory requirement. The turnaround time of the
 program is the difference between the time when the program was submitted for execution (which is
 time zero for all programs in this problem), and the time that the program completes execution.
+
 Input
+
 The input data will contain multiple test cases. Each test case begins with a line containing a pair of
 integers m and n. The number m specifies the number of regions into which primary memory has been
 partitioned (1 ≤ m ≤ 10), and n specifies the number of programs to be executed (1 ≤ n ≤ 50).
@@ -33,7 +36,9 @@ A pair of zeroes will follow the input for the last test case.
 You may assume that each program will execute in exactly the time specified for the given region
 size, regardless of the number of other programs in the system. No program will have a memory
 requirement larger than that of the largest memory region.
+
 Output
+
 For each test case, first display the case number (starting with 1 and increasing sequentially). Then
 print the minimum average turnaround time for the set of programs with two digits to the right of
 the decimal point. Follow this by the description of an execution schedule that achieves this average
@@ -45,39 +50,41 @@ If there are multiple program orderings or assignments to memory regions that yi
 minimum average turnaround time, give one of the schedules with the minimum average turnaround
 time.
 
+
 Sample Input
 
-2 4
+2 4  
+40 60  
+1 35 4  
+1 20 3  
+1 40 10  
+1 60 7  
+3 5  
+10 20 30  
+2 10 50 12 30  
+2 10 100 20 25  
+1 25 19  
+1 19 41  
+2 10 18 30 42  
+0 0  
 
-40 60
-
-1 35 4
-
-1 20 3
-
-1 40 10
-
-1 60 7
-
-3 5
-10 20 30
-2 10 50 12 30
-2 10 100 20 25
-1 25 19
-1 19 41
-2 10 18 30 42
-0 0
 Sample Output
+
 Case 1
+
 Average turnaround time = 7.75
-Program 1 runs in region 1 from 0 to 4
-Program 2 runs in region 2 from 0 to 3
-Program 3 runs in region 1 from 4 to 14
-Program 4 runs in region 2 from 3 to 10
+
+Program 1 runs in region 1 from 0 to 4  
+Program 2 runs in region 2 from 0 to 3  
+Program 3 runs in region 1 from 4 to 14  
+Program 4 runs in region 2 from 3 to 10  
+
 Case 2
+
 Average turnaround time = 35.40
-Program 1 runs in region 2 from 25 to 55
-Program 2 runs in region 2 from 0 to 25
-Program 3 runs in region 3 from 0 to 19
-Program 4 runs in region 3 from 19 to 60
-Program 5 runs in region 1 from 0 to 18
+
+Program 1 runs in region 2 from 25 to 55  
+Program 2 runs in region 2 from 0 to 25  
+Program 3 runs in region 3 from 0 to 19  
+Program 4 runs in region 3 from 19 to 60  
+Program 5 runs in region 1 from 0 to 18  
